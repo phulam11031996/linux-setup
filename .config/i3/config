@@ -213,6 +213,6 @@ for_window [class=".*"] border pixel 2
 
 exec --no-startup-id xset r rate 250 50
 exec --no-startup-id polybar
-exec --no-startup-id feh --bg-scale /home/phu/Pictures/wp4.png
+exec --no-startup-id feh --bg-scale /home/phu/Pictures/wp6.png
 exec --no-startup-id compton --config ~/.config/compton.conf -b
 

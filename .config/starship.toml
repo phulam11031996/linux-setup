@@ -3,14 +3,12 @@
 format = """
 [](color_orange)\
 $os\
-$username\
-[](bg:color_yellow fg:color_orange)\
 $directory\
-[](fg:color_yellow bg:color_aqua)\
+[](bg:color_yellow fg:color_orange)\
 $git_branch\
 $git_status\
-[ ](fg:color_aqua)\
-$line_break$character"""
+[ ](fg:color_yellow)\
+"""
 
 palette = 'gruvbox_dark'
 
@@ -59,7 +57,7 @@ style_root = "bg:color_orange fg:color_fg0"
 format = '[ $user ]($style)'
 
 [directory]
-style = "fg:color_fg0 bg:color_yellow"
+style = "bg:color_orange fg:color_fg0"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -74,11 +72,11 @@ truncation_symbol = "…/"
 [git_branch]
 symbol = ""
 style = "bg:color_aqua"
-format = '[[ $symbol $branch ](fg:color_fg0 bg:color_aqua)]($style)'
+format = '[[ $symbol $branch ](fg:color_fg0 bg:color_yellow)]($style)'
 
 [git_status]
 style = "bg:color_aqua"
-format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_aqua)]($style)'
+format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_yellow)]($style)'
 
 [nodejs]
 symbol = ""
