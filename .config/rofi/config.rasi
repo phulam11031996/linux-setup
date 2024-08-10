@@ -1,0 +1,7 @@
+configuration {
+	display-drun: "Applications";
+	display-window: "Windows";
+	show-icons: true;
+}
+
+@theme "/usr/share/rofi/themes/gruvbox-dark-hard.rasi"
