@@ -213,6 +213,23 @@ for_window [class=".*"] border pixel 2
 
 exec --no-startup-id xset r rate 250 50
 exec --no-startup-id polybar
-exec --no-startup-id feh --bg-scale /home/phu/Pictures/wp6.png
+exec --no-startup-id feh --bg-scale /home/phu/Pictures/wp1.png
 exec --no-startup-id compton --config ~/.config/compton.conf -b
+
+
+## Need to install
+# sudo apt install xdotool maim xclip
+## Screenshots
+bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/Screenshots/$(date)"
+bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/Screenshots/$(date)"
+bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/Screenshots/$(date)"
+
+## Clipboard Screenshots
+bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+
+# for bluetooth
+# sudo install blueman
+# blueman-manager
 
